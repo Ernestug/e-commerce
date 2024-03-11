@@ -3,7 +3,7 @@
 CREATE DATABASE LAW_SHOP;
 
 CREATE TABLE CUSTOMER (
-						Customer_ID varchar (6) primary key,
+			Customer_ID varchar (6) primary key,
                         First_Name text,
                         Last_Name text,
                         Phone_Number varchar (13),
@@ -16,19 +16,19 @@ CREATE TABLE CUSTOMER (
                         
 				
 CREATE TABLE DEPARTMENT (
-						Department_ID varchar (6) primary key,
+			Department_ID varchar (6) primary key,
                         Department_Name text);
                         
                         
 CREATE TABLE EMPLOYEE (
-						Employee_ID varchar (6) primary key,
+			Employee_ID varchar (6) primary key,
                         Employee_Name text,
                         Department_ID varchar (6),
                         foreign key (Department_ID) references DEPARTMENT (Department_ID));
     
      
 CREATE TABLE PRODUCTS (
-						Product_ID varchar (6) primary key,
+			Product_ID varchar (6) primary key,
                         Title text,
                         Descriptions text,
                         Unit_Price float,
@@ -41,7 +41,7 @@ CREATE TABLE PRODUCTS (
 
 					        
 CREATE TABLE ORDERS (
-						Order_ID varchar (6) primary key,
+			Order_ID varchar (6) primary key,
                         Order_Date date,
                         Customer_ID varchar (6),
                         Product_ID varchar (6),
@@ -53,7 +53,7 @@ CREATE TABLE ORDERS (
  
  
 CREATE TABLE ORDERS_PRODUCTS (
-								Order_ID varchar (6),
+				Order_ID varchar (6),
                                 Product_ID varchar (6),
                                 primary key (Order_ID, Product_ID),
                                 foreign key (Order_ID) references ORDERS (Order_ID),
