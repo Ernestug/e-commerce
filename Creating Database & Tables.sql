@@ -53,8 +53,8 @@ CREATE TABLE ORDERS (
  
  
 CREATE TABLE ORDERS_PRODUCTS (
-				Order_ID varchar (6),
-                                Product_ID varchar (6),
-                                primary key (Order_ID, Product_ID),
-                                foreign key (Order_ID) references ORDERS (Order_ID),
-                                foreign key (Product_ID) references PRODUCTS (Product_ID));
+			Order_ID varchar (6),
+                        Product_ID varchar (6),
+                        primary key (Order_ID, Product_ID),
+                        foreign key (Order_ID) references ORDERS (Order_ID),
+                        foreign key (Product_ID) references PRODUCTS (Product_ID));
